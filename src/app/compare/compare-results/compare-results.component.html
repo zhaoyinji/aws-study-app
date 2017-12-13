@@ -11,6 +11,7 @@
   <div class="col-xs-12 col-sm-10 col-md-6 cold-sm-offset-1 col-md-offset-3 text-center">
     <h3>Select Filter</h3>
     <div class="list-group">
+      <a style="cursor: pointer;" class="list-group-item" (click)="onFilter('name')" [ngClass]="{active: filter == 'name'}">Your Name: {{ user.name }}</a>
       <a style="cursor: pointer;" class="list-group-item" (click)="onFilter('age')" [ngClass]="{active: filter == 'age'}">Your Age: {{ user.age }}</a>
       <a style="cursor: pointer;" class="list-group-item" (click)="onFilter('height')" [ngClass]="{active: filter == 'height'}">Your Height: {{ user.height }}</a>
       <a style="cursor: pointer;" class="list-group-item" (click)="onFilter('income')" [ngClass]="{active: filter == 'income'}">Your Income: {{ user.income }}</a>
@@ -30,7 +31,7 @@
     </div>
     <ul class="list-group">
       <li class="list-group-item" *ngFor="let data of compareData" [ngClass]="getListGroupItemClass(data)">
-        Age: {{ data.age }} | Height: {{ data.height }} | Income: {{ data.income }}
+          Name: {{ data.name }} | Age: {{ data.age }} | Height: {{ data.height }} | Income: {{ data.income }}
       </li>
     </ul>
   </div>

@@ -31,6 +31,7 @@ export class CompareInputComponent implements OnInit {
 
   onSubmit() {
     const data: CompareData = {
+      name: this.form.value.name as string,
       age: this.form.value.age as number,
       height: this.form.value.height as number,
       income: this.form.value.income as number
